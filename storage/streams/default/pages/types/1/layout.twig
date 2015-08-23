@@ -1,0 +1,6 @@
+<h1>{{ page.title }}</h1>
+{{ page.entry.content|raw }}
+
+{% for artist in streams_entries({'namespace':'spotify', 'stream': 'artists'}) %}
+    {{ artist.name }}
+{% endfor %}
